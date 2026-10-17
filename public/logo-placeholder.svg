@@ -1,0 +1,27 @@
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA820A" />
+    </linearGradient>
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Luxury Monogram Emblem -->
+  <g transform="translate(10, 8)">
+    <circle cx="22" cy="22" r="21" stroke="url(#goldGradient)" stroke-width="1.2" stroke-dasharray="3 2" opacity="0.6"/>
+    <circle cx="22" cy="22" r="18" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.9"/>
+    <!-- P & S Stylized Monogram -->
+    <path d="M16 13H24C27.3137 13 30 15.6863 30 19C30 22.3137 27.3137 25 24 25H16V13Z" stroke="url(#goldGradient)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 13V31" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M21 24C24 24 28 25.5 28 28.5C28 31.5 24 32 21 32C17 32 15 30 15 30" stroke="url(#goldGradient)" stroke-width="1.6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="68" y="27" fill="url(#goldGradient)" font-family="'Cormorant Garamond', Georgia, serif" font-size="20" font-weight="600" letter-spacing="4" filter="url(#goldGlow)">PERFECT</text>
+  <text x="69" y="44" fill="#FAF9F6" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="400" letter-spacing="6" opacity="0.85">STUDIO</text>
+</svg>

@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-obsidian: #060606;
+  --bg-charcoal: #0F0F10;
+  --bg-glass: rgba(18, 18, 20, 0.68);
+  --gold-primary: #D4AF37;
+  --gold-light: #F3E5AB;
+  --gold-muted: rgba(212, 175, 55, 0.22);
+  --text-ivory: #FAF9F6;
+  --text-taupe: #A39E93;
+  --whatsapp-emerald: #25D366;
+}
+
+/* Base resets & typography */
+html {
+  background-color: var(--bg-obsidian);
+  color: var(--text-ivory);
+  scroll-behavior: auto; /* Lenis handles smooth scrolling */
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-ivory);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Luxury text selection */
+::selection {
+  background: rgba(212, 175, 55, 0.35);
+  color: #FFFFFF;
+}
+
+/* Custom luxury gold scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080809;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
+
+/* Cinematic Film Grain Overlay */
+.film-grain {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.038;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Radial Vignette over 3D Canvas */
+.vignette-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(circle at center, transparent 30%, rgba(6, 6, 6, 0.88) 100%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(18, 18, 20, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+}
+
+.glass-pill {
+  background: rgba(24, 24, 28, 0.55);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-border-glow:hover {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.35);
+}
+
+/* Interactive touch targets min 44x44px for accessibility */
+button, a, input, select, textarea {
+  min-height: 44px;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
